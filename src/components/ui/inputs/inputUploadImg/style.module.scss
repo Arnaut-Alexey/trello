@@ -1,0 +1,35 @@
+@import '../../../../assets/styles/vars';
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .field__img {
+        background: linear-gradient(to bottom right, #9A508B, #30E7EA);
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    p {
+        text-align: center;
+        cursor: pointer;
+        padding-top: 16px;
+    }
+}

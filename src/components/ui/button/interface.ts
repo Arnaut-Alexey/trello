@@ -3,5 +3,6 @@ export interface IButtonProps {
     isDisabled?: boolean,
     type?: 'button' | 'submit' | 'link',
     path?: string,
-    size?: 'sm' | 'md'
+    size?: 'sm' | 'md',
+    onClick?: () => void,
 }

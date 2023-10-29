@@ -26,3 +26,8 @@ export interface IInputPasswordProps {
     error?: string,
     icon?: string,
 }
+
+export interface InputUploadImgProps {
+    value: File | undefined,
+    setValue: (e: File) => void,
+}

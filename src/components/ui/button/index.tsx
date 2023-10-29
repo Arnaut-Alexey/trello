@@ -6,14 +6,18 @@ import { IButtonProps } from './interface';
 import styles from './style.module.scss';
 
 export const Button: React.FC<IButtonProps> = (props) => {
-  const { children, isDisabled = false, type, path, size } = props;
+  const { children, isDisabled = false, type, path, size, onClick } = props;
 
   const navigate = useNavigate();
 
   const handleClick = () => {
 
-    if(type === 'link' && path) {
+    if (type === 'link' && path) {
       navigate(path)
+    }
+
+    if (onClick) {
+      onClick()
     }
   }
 

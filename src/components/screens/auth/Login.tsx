@@ -2,6 +2,8 @@ import { AuthLayout } from './authLayout';
 import { Input } from '../../ui/inputs';
 import { Button } from '../../ui/button';
 
+import { authStore } from '../../../store/authStore';
+
 import { ILoginProps } from './interface';
 
 import styles from './style.module.scss';
@@ -10,6 +12,10 @@ export const Login = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement & ILoginProps> = (e) => {
     e.preventDefault(); 
+
+    const form = e.currentTarget;
+
+    authStore.login(form);
   }
 
   return (

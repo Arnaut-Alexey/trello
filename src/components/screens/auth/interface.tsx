@@ -16,4 +16,5 @@ export interface ISignupProps {
     name: HTMLInputElement,
     email: HTMLInputElement,
     password: HTMLInputElement,
+    img: string,
 }
