@@ -1,0 +1,62 @@
+@import '../../assets/styles/vars';
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color_black, 0.5);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    opacity: 0;
+    z-index: 99;
+
+    &.__active {
+        opacity: 1;
+        
+        .modal_inner {
+
+            .modal_content {
+                pointer-events: all;
+            }
+        }
+    }
+
+    .modal_inner {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 180px 36px;
+        pointer-events: none;
+
+        .modal_content {
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            background-color: $color_l_black;
+            color: $color_white;
+            padding: 36px;
+            border: 1px solid $color_gray;
+            border-radius: 8px;
+
+            .modal__close {
+                position: absolute;
+                top: 6px;
+                right: 6px;
+            }
+
+            .modal__head {
+                text-align: center;
+            }
+
+            .modal__actions {
+                width: 100%;
+            }
+        }
+    }
+}

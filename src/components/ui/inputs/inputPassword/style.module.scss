@@ -1,0 +1,55 @@
+@import '../../../../assets/styles/vars';
+
+.field {
+
+    &:hover {
+
+        .field__icon {
+
+            svg {
+
+                path {
+                    fill: $color_white;
+                }
+            }
+        }
+
+        input {
+            border-color: $color_purple;
+        }
+    }
+
+    &.__visible {
+
+        .field__icons {
+
+            .field__icon {
+
+                &:nth-child(1) {
+                    opacity: 0;
+                }
+
+                &:nth-child(2) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    input {
+        width: 100%;
+        padding: 16px 48px 16px 16px;
+        border-radius: 4px;
+        border: 1px solid $color_gray;
+        color: $color_white;
+
+        &::placeholder {
+            color: $color_gray;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $color_purple;
+        }
+    }
+}

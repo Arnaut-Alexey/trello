@@ -1,0 +1,37 @@
+@import '../../../../assets/styles/vars';
+
+.field {
+
+    &:hover {
+
+        .field__icon {
+
+            svg {
+
+                path {
+                    fill: $color_white;
+                }
+            }
+        }
+
+        input {
+            border-color: $color_purple;
+        }
+    }
+
+    input {
+        padding: 16px 16px 16px 16px;
+        border-radius: 4px;
+        border: 1px solid $color_gray;
+        color: $color_white;
+
+        &::placeholder {
+            color: $color_gray;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $color_purple;
+        }
+    }
+}

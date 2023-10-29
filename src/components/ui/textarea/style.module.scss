@@ -1,0 +1,57 @@
+@import '../../../assets/styles/vars';
+
+.field {
+    width: 100%;
+
+    &.__sm {
+
+        textarea {
+            padding: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 140%;
+        }
+    }
+
+    &.__md {
+
+        textarea {
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+
+    &.__primary {
+
+        textarea {
+            border: 1px solid $color_gray;
+
+            &:hover, &:focus {
+                border-color: $color_purple;
+            }
+        }
+    }   
+
+    &.__secondary {
+        
+        textarea {
+            border: 1px solid transparent;
+
+            &:focus, &:active {
+                border: 1px solid $color_gray;
+            }
+        }
+    }
+
+    textarea {
+        width: 100%;
+        color: $color_white;
+        border-radius: 4px;
+
+        &::placeholder {
+            color: $color_gray;
+        }
+    }
+}

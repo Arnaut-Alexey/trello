@@ -1,0 +1,49 @@
+.auth {
+
+    .sectionBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+        padding: 96px 0;
+
+        .sectionBox_inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .sectionBox__title {
+                margin-bottom: 32px;
+            }
+
+            .sectionBox__form {
+                max-width: 500px;
+                width: 100%;
+                margin: 0 auto;
+
+                .sectionBox__form_fields {
+
+                    .sectionBox__form_field {
+
+                        &:not(:last-child) {
+                            margin-bottom: 32px;
+                        }
+                    }
+                }
+
+                .sectionBox__form_actions {
+                    margin-top: 32px;
+
+                    .sectionBox__form_action {
+                        text-align: center;
+
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

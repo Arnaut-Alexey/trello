@@ -1,0 +1,61 @@
+@import '../../../assets/styles/vars';
+
+.btn {
+    position: relative;
+    width: 100%;
+    background-color: $color_purple;
+    border-radius: 4px;
+    color: $color_white;
+
+    &:hover {
+        background-color: $color_hov_purple;
+    }
+
+    &.__sm {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        padding: 8px;
+    }
+
+    &.__md {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 120%;
+        padding: 16px;
+    }
+
+    &.__link {
+        width: auto;
+        padding: 0;
+        background: none;
+        border: none;
+        border-radius: none;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 0%;
+            height: 2px;
+            border-radius: 10px;
+            bottom: -2px;
+            right: 0;
+            background-color: $color_white;
+            transition: 0.5s;
+        }
+
+        &:hover {
+
+            &::before {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &.__disabled {
+        background-color: $color_gray !important;
+        cursor: auto;
+        pointer-events: none;
+    }
+}

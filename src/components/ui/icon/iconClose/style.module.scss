@@ -1,0 +1,49 @@
+@import '../../../../assets/styles/vars';
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &.__dark {
+
+        &:hover {
+            background-color: rgba($color_white, 0.1);
+        }
+
+        span {
+            background-color: $color_white;
+        }
+    }
+
+    &.__sm {
+        width: 24px;
+        height: 24px;
+    }
+
+    &.__md {
+        width: 32px;
+        height: 32px;
+    }
+
+    span {
+        position: absolute;
+        width: 70%;
+        height: 2px;
+        border-radius: 10px;
+
+        &:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+            transform: rotate(-45deg);
+        }
+    }
+}
