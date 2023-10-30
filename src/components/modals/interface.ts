@@ -3,3 +3,7 @@ export interface IModalWrapperProps {
     closeSize: 'sm' | 'md',
     name: string,
 }
+
+export interface ICreateProjectProps {
+    title: HTMLInputElement,
+}

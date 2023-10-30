@@ -6,11 +6,11 @@ import styles from '../style.module.scss';
 import { Link } from 'react-router-dom';
 
 export const Project:React.FC<IProjectProps> = (props) => {
-    const { id, title, color } = props;
+    const { id, title } = props;
     
     return (
         <Link 
-            className={styles.project} style={{ backgroundColor: `#${color}` }} 
+            className={styles.project}
             to={`/${id}/${title.replace(/ /g,'')}`}
             >
             <p className={styles.project__name}>

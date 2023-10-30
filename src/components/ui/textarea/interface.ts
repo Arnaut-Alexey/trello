@@ -5,5 +5,5 @@ export interface ITextareaProps {
     size?: 'sm' | 'md',
     defaultValue?: string,
     variables?: 'primary' | 'secondary',
-    onSubmit?: (e) => void,
+    onSubmit?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void | undefined,
 }

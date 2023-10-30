@@ -12,7 +12,7 @@ import styles from '../style.module.scss';
 export const Board: React.FC<IBoardProps> = (props) => {
     const { id, title, tasks, isVisible, setIsVisible } = props;
 
-    const editBoardTitle: React.FormEventHandler<HTMLFormElement> = (e) => {
+    const editBoardTitle: React.FormEventHandler<HTMLTextAreaElement> = (e) => {
         const field = e.currentTarget;
 
         field.blur();

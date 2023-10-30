@@ -4,5 +4,6 @@ export interface IButtonProps {
     type?: 'button' | 'submit' | 'link',
     path?: string,
     size?: 'sm' | 'md',
+    isLoading?: boolean,
     onClick?: () => void,
 }

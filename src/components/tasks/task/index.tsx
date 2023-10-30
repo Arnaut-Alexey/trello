@@ -10,6 +10,8 @@ import { editTaskStore } from '../../../store/editTaskStore';
 export const Task: React.FC<ITaskProps> = (props) => {
     const { id, title } = props;
 
+    console.log(id);
+
     const editTask = () => {
         modalStore.openModal('edit-task');
 

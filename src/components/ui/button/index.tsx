@@ -6,7 +6,7 @@ import { IButtonProps } from './interface';
 import styles from './style.module.scss';
 
 export const Button: React.FC<IButtonProps> = (props) => {
-  const { children, isDisabled = false, type, path, size, onClick } = props;
+  const { children, isDisabled = false, type, path, size, isLoading = false, onClick } = props;
 
   const navigate = useNavigate();
 
@@ -23,10 +23,12 @@ export const Button: React.FC<IButtonProps> = (props) => {
 
   return (
     <button
-      className={`${styles.btn} ${isDisabled ? styles.__disabled : ''} ${type === 'link' ? styles.__link : ''} ${size === 'sm' ? styles.__sm : styles.__md}`}
+      className={`${styles.btn} ${isLoading ? styles.__loading : ''} ${isDisabled ? styles.__disabled : ''} ${type === 'link' ? styles.__link : ''} ${size === 'sm' ? styles.__sm : styles.__md}`}
       onClick={handleClick}
     >
-      {children}
+      <span>
+        {children}
+      </span>
     </button>
   )
 }

@@ -21,7 +21,10 @@ export const Textarea: React.FC<ITextareaProps> = observer((props) => {
     const keyDownPress: React.KeyboardEventHandler<HTMLTextAreaElement> = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            onSubmit(e)
+
+            if(onSubmit) {
+                onSubmit(e)
+            }
         }
     }
 
